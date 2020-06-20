@@ -1,0 +1,22 @@
+.ClockItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 3px #ffffff;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(40,44,55,1) 0%, rgba(23,25,32,1) 100%);
+}
+
+.ClockItem > div {
+  font-size: 14px;
+}
+
+.ClockItem:hover {
+  box-shadow: 0 0 5px #ffffff;
+  transform: scale(1.01);
+  transition: 0.3s;
+}

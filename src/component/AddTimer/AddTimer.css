@@ -1,0 +1,39 @@
+.AddTimer-container {
+  position: relative;
+}
+.AddTimer img {
+  display: block;
+  margin: 20px auto;
+  width: 50px;
+}
+
+.TimeZone-List {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+.TimeZone-List ul {
+  list-style-type: none;
+  text-align: center;
+  font-size: 14px;
+  background-color: #282C37;
+}
+
+.TimeZone-List ul li {
+  padding: 12px 14px;
+  margin-top: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ffffff;
+  cursor: pointer;
+}
+
+.TimeZone-List ul li:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+
