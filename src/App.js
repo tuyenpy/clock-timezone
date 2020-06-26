@@ -1,7 +1,13 @@
 import React, {useState, useEffect} from 'react';
+
+import timezones from './timezone';
+import {
+  getLocalStorage,
+  setLocalStorage
+} from './func/localStorage';
+
 import ClockItem from './component/ClockItem/ClockItem';
 import AddTimer from './component/AddTimer/AddTimer';
-import timezones from './timezone';
 
 import './App.css';
 
@@ -23,6 +29,7 @@ function App() {
     ]
     setTimer(newTimer);
     setLocalStorage(newTimer);
+    timezones.splice(index, 1);
   }
 
   //delete timezone
@@ -46,15 +53,6 @@ function App() {
   );
 }
 
-//get timezone array in localStorage
-function getLocalStorage() {
-  return JSON.parse(localStorage.getItem('timer'));
-}
 
-//set timezone array to localStorage
-function setLocalStorage(setTime) {
-  let strTimer = JSON.stringify(setTime);
-  localStorage.setItem('timer', strTimer);
-}
 
 export default App;

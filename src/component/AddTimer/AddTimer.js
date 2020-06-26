@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import timezones from '../../timezone';
-import add from './add.svg';
-import close1 from './close.svg';
+import add from '../../assets/images/add.svg';
+import close1 from '../../assets/images/close.svg';
 import './AddTimer.css';
 
 const AddTimer = (props) => {
@@ -24,7 +24,11 @@ const AddTimer = (props) => {
         <ul>
           {
             timezones.map((timezone, index) =>
-              <li key={index} onClick={() => onTimer(index)}>{timezone}</li>)
+              <li key={index} onClick={() => {
+                onTimer(index);
+                setState(!state);
+                setClose(!closer)
+              }}>{timezone}</li>)
           }
         </ul>
       </div>
